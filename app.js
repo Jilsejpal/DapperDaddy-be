@@ -29,6 +29,9 @@ app.use("/api/v1", order);
 app.use("/api/v1", payment);
 app.use("/api/v1", banner);
 app.use("/api/v1", coupon);
+app.use("/", (req, res) => {
+  return res.send("hello");
+});
 
 // middleware for error
 app.use(errorMiddleware);
